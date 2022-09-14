@@ -9,8 +9,10 @@ public class Box implements SweetBox {
         sweets.add(s);
     }
 
-    public void delete() {          //метод для удаления последнего объекта
-        sweets.remove(sweets.size() -1 );
+    public void delete() {   //метод для удаления последнего объекта
+        if (sweets.size() > 0) {
+            sweets.remove(sweets.size() - 1);
+        }
     }
 
     public double weight() {        //метод для вывода веса
@@ -30,11 +32,14 @@ public class Box implements SweetBox {
     }
 
     public String info() {      //метод для вывода общей информации
-        String info = "Информация: \n";
-        for (int i = 0; i < sweets.size(); i++){
-            info += sweets.get(i).getInfo();
-        }
-        return info;
+        if (sweets.size() > 0) {
+            String info = "Информация: \n";
+            for (int i = 0; i < sweets.size(); i++) {
+                info += sweets.get(i).getInfo();
+            }
+            return info;
+        } else
+            return "";
     }
 
     public void optimizationWeight(double maxWeight) {      //метод для оптимизации с меньшим весом

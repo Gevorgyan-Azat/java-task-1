@@ -14,11 +14,11 @@ public class Main {
 
         System.out.println(box.info()); //выводим общую информацию
 
-        box.optimizationWeight(10); //оптимизируем с меньшим весом
+        box.optimizationWeight(5); //оптимизируем с меньшим весом
 
         System.out.println(box.info());
 
-        box.optimizationPrice(8); //оптимизмруем с меньшей ценой
+        box.optimizationPrice(3); //оптимизмруем с меньшей ценой
 
         System.out.println(box.info());
 
